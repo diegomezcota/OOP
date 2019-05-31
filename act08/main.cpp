@@ -1,0 +1,33 @@
+#include <iostream>
+#include <complejo.h>
+
+using namespace std;
+
+int main() {
+  complejo a;
+
+  int rB, iB, rC, iC;
+
+  cout << "Ingrese el numero real B: ";
+  cin >> rB;
+  cout << "Ingrese el numero imaginario B: ";
+  cin >> iB;
+  cout << "Ingrese el numero real C: ";
+  cin >> rC;  
+  cout << "Ingrese el numero imaginario C: ";
+  cin >> iC;
+
+  complejo b(rB, iB);
+  complejo c(rC, iC);
+
+  complejo d = b.sumaComplejo(c.getReal(), c.getImaginario());
+  complejo e = b.restaComplejo(c.getReal(), c.getImaginario());
+
+ 
+
+  cout << "a = (" << a.getReal() << ", " << a.getImaginario() << "i)\n";
+  cout << "b = (" << b.getReal() << ", " << b.getImaginario() << "i)\n";
+  cout << "c = (" << c.getReal() << ", " << c.getImaginario() << "i)\n";
+  cout << "d = (" << d.getReal() << ", " << d.getImaginario() << "i)\n";
+  cout << "e = (" << e.getReal() << ", " << e.getImaginario() << "i)\n";
+}

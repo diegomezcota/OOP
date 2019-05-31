@@ -1,0 +1,4 @@
+Este es un ejemplo con un conjunto de palabras que tienen la palabra un varias veces. 
+Un pajarito me dijo un día comun hola.
+Comunmente como atun.
+Ellos se reunen unicamente los lunes.
