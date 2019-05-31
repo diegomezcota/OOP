@@ -4,35 +4,37 @@
 using namespace std;
 
 int main(){
-   int iResiduo;
-   string sNumero, sSeguir="S";
+   int iResidue, iSum;
+   string sNumber, sContinue="Y";
    do {
-     if (sSeguir == "S"){
-       int iSuma = 0;
-   cout << "Teclee el numero de 9 digitos: ";
-   getline(cin, sNumero);
-   if (sNumero.length() != 9) {
-       cout << "Termino incorrecto.\n";
-   }
-   else {
-       for (int i = 0; i < 9; i++){
-           iSuma += (int(sNumero[i]) - 48) * (i+1);
-       }
-    iResiduo = iSuma % 11;
-    if (iResiduo != 10){
-        cout << "El ISBN es " << sNumero << "-" << iResiduo << endl;
-    } else {
-        cout << "El ISBN es " << sNumero << "-X\n";
+    if (sContinue == "Y"){
+    iSum = 0;
+    cout << "Enter 9 digit number: ";
+    getline(cin, sNumber);
+    if (sNumber.length() != 9) {
+        cout << "Incorrect term.\n";
+    }
+    else {
+        for (int i = 0; i < 9; i++){
+            iSum += (int(sNumber[i]) - 48) * (i+1);
+        }
+        iResidue = iSum % 11;
+        if (iResidue != 10){
+            cout << "The ISBN code is " << sNumber << "-" << iResidue << endl;
+        } else {
+            cout << "The ISBN code is " << sNumber << "-X\n";
+        }
+
+        }
+
     }
 
-     }
+        cout << "Continue?(Y/N): ";
+        getline(cin, sContinue);
 
-   }
+   } while (sContinue != "N");
 
-    cout << "Continuar?(S/N): ";
-    getline(cin, sSeguir);
-
-   } while (sSeguir != "N");
+    cout << "Bye!";
 
    return 0;
 }
