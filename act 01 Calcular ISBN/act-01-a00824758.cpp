@@ -3,6 +3,10 @@
 
 using namespace std;
 
+// Diego Gómez Cota
+// Code the algorithm to get the ISBN code of a 9 digit number
+// The ISBN code: https://en.wikipedia.org/wiki/International_Standard_Book_Number#ISBN-10_check_digits
+
 int main(){
    int iResidue, iSum;
    string sNumber, sContinue="Y";
